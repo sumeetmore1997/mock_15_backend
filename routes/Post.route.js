@@ -14,7 +14,7 @@ postRouter.get("/retrievedata",async(req,res)=>{
         let order=query._order
         if(order=="asc")
         {
-           const posts= await PostModel.find( query).sort({ budget: 1 })
+           const posts= await PostModel.find( query).sort({ budget:1 })
            //console.log(posts)
            res.send({msg:"posts getting successfully ",posts})
         }
